@@ -1,0 +1,94 @@
+<main class="section-galeria">
+    <article>
+        <div class="btn-agregar">
+            <h2>cumpleaños</h2>
+            <div class="editar">
+                <label onclick="agregarImg('galeria-Cumple')" for="nuevo">Agregar +</label>
+                <button id="eliminar" onclick="eliminarImg('galeria-Cumple')">eliminar</button>
+            </div>
+            <input type="file" name="nuevo" id="nuevo">
+        </div>
+        <div class="galeria2" id="galeria-Cumple">
+            <div><img src="../assets/img/IMAGENES/18años2.jpg" alt=""></div>
+            <div><img src="../assets/img/IMAGENES/1año.jpg" alt=""></div>
+            <div><img src="../assets/img/IMAGENES/baby.jpg" alt=""></div>
+            <div><img src="../assets/img/IMAGENES/18años2.jpg" alt=""></div>
+            <div><img src="../assets/img/IMAGENES/1año.jpg" alt=""></div>
+            <div><img src="../assets/img/IMAGENES/baby.jpg" alt=""></div>
+        </div>
+    </article>
+    <article>
+        <div class="btn-agregar">
+            <h2>Baby Shawer</h2>
+            <div class="editar">
+                <label onclick="agregarImg('galeria-Baby')" for="nuevo">Agregar +</label>
+                <button id="eliminar" onclick="eliminarImg('galeria-Bady')">eliminar</button>
+            </div>
+            <input type="file" name="nuevo" id="nuevo">
+        </div>
+        <div class="galeria2" id="galeria-Baby">
+            <div><img src="../assets/img/IMAGENES/quince.jpg" alt=""></div>
+            <div><img src="../assets/img/IMAGENES/18años2.jpg" alt=""></div>
+            <div><img src="../assets/img/IMAGENES/18años2.jpg" alt=""></div>
+            <div><img src="../assets/img/IMAGENES/quince.jpg" alt=""></div>
+            <div><img src="../assets/img/IMAGENES/18años2.jpg" alt=""></div>
+            <div><img src="../assets/img/IMAGENES/18años2.jpg" alt=""></div>
+        </div>
+    </article>
+    <article>
+        <div class="btn-agregar">
+            <h2>Casamientos</h2>
+            <div class="editar">
+                <label onclick="agregarImg('galeria-Cas')" for="nuevo">Agregar +</label>
+                <button id="eliminar" onclick="eliminarImg('galeria-Cas')">eliminar</button>
+            </div>
+            <input type="file" name="nuevo" id="nuevo">
+        </div>
+        <div class="galeria2" id="galeria-Cas">
+            <div><img src="../assets/img/IMAGENES/18años2.jpg" alt=""></div>
+            <div><img src="../assets/img/IMAGENES/18años2.jpg" alt=""></div>
+            <div><img src="../assets/img/IMAGENES/18años2.jpg" alt=""></div>
+            <div><img src="../assets/img/IMAGENES/18años2.jpg" alt=""></div>
+            <div><img src="../assets/img/IMAGENES/18años2.jpg" alt=""></div>
+            <div><img src="../assets/img/IMAGENES/18años2.jpg" alt=""></div>
+        </div>
+    </article>
+</main>
+
+<script>
+
+
+
+
+    function agregarImg(galeriaId) {
+        let galeria = document.getElementById(`${galeriaId}`);
+        let input = document.getElementById('nuevo');
+        let div = document.createElement('div');
+        input.addEventListener('change', function () {
+            if (this.files && this.files[0]) {
+                let img = document.createElement('img');
+                img.src = URL.createObjectURL(this.files[0]);
+                div.appendChild(img);
+                div.classList.add('galeria2');
+                galeria.appendChild(div);
+            }
+
+        })
+
+
+    }
+    function eliminarImg(galeriaId) {
+
+        if (window.confirm('¿Desea eliminar la imagen?')) {
+            let galeria2 = document.getElementById(`${galeriaId}`);
+            let eliminarDiv = galeria2.lastElementChild;
+            while (eliminarDiv && eliminarDiv.nodeType !== 1) {
+                eliminarDiv = eliminarDiv.previousElementSibling;
+            }
+            if (eliminarDiv) {
+                galeria2.removeChild(eliminarDiv);
+            }
+        }
+
+    }
+</script>

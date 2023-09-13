@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #23272E;
+    color: white;
+    background-image: url(../assets/img/IMAGENES/banner2.jpg);
+    background-size: cover;
+}
+:root{
+    --gradient: linear-gradient(45deg, rgba(255, 0, 0, 0.7), rgba(0, 0, 255, 0.7)) 1;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+#main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    min-width: 400px;
+    border: 1px solid white;
+    /* border-image:var(--gradient); */
+    position: relative;
+    border-radius: 2rem;
+    overflow: hidden;
+    
+}
+form::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-image: url(../assets/img/IMAGENES/banner2.jpg); */
+    background-size: cover;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    
+}
+form::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.2);
+    z-index: -1;
+    left: 0;
+    top: 0;
+    backdrop-filter: blur(2px);
+}
+
+/* .formulario{
+    width: ;
+} */
+
+form label{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 1rem;
+    width: 70%;
+    margin: auto;
+    padding: .5rem;
+
+}
+label input{
+    width: 60%;
+    border-radius: .5rem;
+    padding: .5rem;
+}
+label input{
+    outline: none;
+    border: none;
+
+}
+label input:focus{
+    box-shadow: 1px 1px 2px white, 0 0 5px white;
+}
+/*
+
+Puedes personalizar un elemento de entrada <input> en HTML utilizando varias propiedades de CSS. Aquí tienes una lista de las propiedades más comunes que puedes cambiar:
+
+color: Controla el color del texto dentro del campo de entrada.
+
+background-color: Define el color de fondo del campo de entrada.
+
+border: Establece el estilo, el ancho y el color del borde del campo de entrada.
+
+border-radius: Permite redondear las esquinas del campo de entrada.
+
+width y height: Controlan el ancho y la altura del campo de entrada.
+
+padding: Añade espacio entre el contenido y el borde del campo de entrada.
+
+margin: Define el espacio alrededor del campo de entrada.
+
+font-size: Cambia el tamaño de la fuente dentro del campo de entrada.
+
+font-family: Establece la familia de fuentes utilizada en el texto del campo de entrada.
+
+text-align: Controla la alineación del texto dentro del campo de entrada.
+
+line-height: Define la altura de línea del texto dentro del campo de entrada.
+
+placeholder: Establece el estilo del texto del marcador de posición (placeholder) dentro del campo de entrada.
+
+outline: Define el estilo del contorno que aparece cuando el campo de entrada está enfocado.
+
+cursor: Cambia el cursor del mouse cuando se sitúa sobre el campo de entrada.
+
+box-shadow: Agrega una sombra alrededor del campo de entrada.
+
+text-transform: Controla la transformación de texto (mayúsculas, minúsculas, capitalización) en el campo de entrada.
+
+resize: Define si el campo de entrada se puede redimensionar por el usuario.
+
+transition: Permite suavizar las transiciones de propiedad cuando se cambia su valor.
+
+background-image: Puedes agregar una imagen de fondo al campo de entrada.
+
+background-size: Controla el tamaño de la imagen de fondo.
+
+background-position: Define la posición de la imagen de fondo.
+
+background-repeat: Establece cómo se repite la imagen de fondo.
+*/
+form button{
+    width: 50%;
+    text-align: center;
+    padding: .5rem;
+    border-radius: 1rem;
+    background-color:#09f ;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+
+}
+form button:hover{
+    cursor: pointer;
+    box-shadow: 1px 1px 5px white;
+    color: #09f;
+    background-color: white;
+}
+.botones{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    width: 70%;
+    margin:1rem auto;
+    gap: .5rem;
+
+}
+
+
+
+
+

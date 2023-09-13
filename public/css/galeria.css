@@ -1,0 +1,151 @@
+.section-galeria{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+}
+
+.section-galeria article{
+
+}
+.galeria2{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    justify-content: center;
+    overflow: hidden;
+
+
+}
+.galeria2 div{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20rem;
+    overflow: hidden;
+
+}
+.galeria2 div img{
+
+    height: 100%;
+}
+.editar{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    gap: 1rem;
+}
+
+.btn-agregar{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    
+    align-items: center;
+    text-transform: uppercase;
+    margin: 1rem auto;
+    gap: 1rem;
+}
+
+.btn-agregar label, .btn-agregar button{
+    background-color: #09f;
+    padding: .5rem;
+    width: 100%;
+    border: none;
+    color: white;
+    border-radius: 1rem;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+
+.btn-agregar label:hover, .btn-agregar button:hover{
+    cursor: pointer;
+    background-color: #8CC265;
+}
+.btn-agregar input{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* main{
+    padding: 2rem;
+} */
+/* 
+.galeria2{
+    position: relative;
+}
+.galeria2 div{
+    overflow: hidden;
+}
+.galeria2 div img{
+    height: 100%;
+    width: 100%;
+}
+
+.slick-dots{
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    display: flex;
+    gap: 1rem;
+}
+.slick-track{
+    display: flex!important;
+    gap: 1rem;
+}
+
+.slick-slide{
+    border: 1px solid black;
+    display: flex!important;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+@media(min-width:678px){
+    .slick-slide{
+        max-width: 300px;
+        height: 300px;
+    }
+    .galeria2{
+        max-width: 600px;
+        margin: auto;
+    }
+}
+
+
+
+
+
+
+
+ */

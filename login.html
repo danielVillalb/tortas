@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body>
+    <main>
+        <img src="./assets/img/IMAGENES/loading.gif" alt="" id="loading">
+        <div id="main">
+            <h1>Login</h1>
+            <div class="formulario">
+                <form action="/validar" method="POST">
+                    <label for="usuario">Usuario:
+                        <input type="text" name="usuario" placeholder="Usuario"></label>
+                    <label for="password">Password:
+                        <input type="password" name="password" placeholder="Password"></label>
+                    <div class="botones">
+                        <button>Registrarse</button>
+                        <button type="submit">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script>
+        const main = document.getElementById('main');
+        const loading = document.getElementById('loading');
+        main.style.display = 'none';
+        loading.style.display = 'block';
+        setTimeout(() => {
+            main.style.display = 'block';
+            loading.style.display = 'none';
+        }, 1500)
+    </script>
+</body>
+
+</html>
